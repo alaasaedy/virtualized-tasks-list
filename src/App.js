@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import Window from './components/window';
+import { truncateStr } from './utils';
+import TasksList from './MOCK_DATA.json';
+import './index.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Tasks List</h1>
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          right: 0,
+        }}
+      ></div>
+      <div className='app'>
+        <Window rowHeight={200}>
+          {TasksList.map((task, index) => ({
+            id: index,
+            title: task.subject,
+            priority: task.priority,
+            status: task.status,
+            description: task.description,
+          })).map((item) => {
+            let badgeColor;
+            switch (item.priority.toLowerCase()) {
+              case 'high':
+                badgeColor = 'red';
+                break;
+              case 'medium':
+                badgeColor = 'yellow';
+                break;
+              default:
+                badgeColor = '';
+                break;
+            }
+
+            return (
+              <div className='row' key={item.id}>
+                <h4 className='task-title'>
+                  {item.title}
+                  <span className={`badge ${badgeColor}`}>{item.priority}</span>
+                  <span className='status'>{item.status}</span>
+                </h4>
+                <p>{truncateStr(item.description)}</p>
+              </div>
+            );
+          })}
+        </Window>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
