@@ -1,0 +1,88 @@
+.form-container {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(43, 44, 44, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editing-form {
+  width: 50%;
+  height: 500px;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  color: rgb(17 24 39);
+}
+
+.form-title {
+  color: rgb(17 24 39);
+  font-weight: 500;
+  line-height: 1.25rem;
+  width: 70%;
+}
+
+.form-control {
+  width: 70%;
+}
+
+.form-control label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: rgb(17 24 39);
+  margin-bottom: 0.5rem;
+}
+
+.form-control input {
+  display: block;
+  width: 100%;
+  border: 1px solid rgb(209 213 219);
+  border-radius: 0.5rem;
+  background-color: rgba(249, 250, 251, 0.7);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(17 24 39);
+  padding: 0.5rem 0 0.3rem;
+}
+
+.form-container select {
+  display: block;
+  width: 100%;
+  background-color: rgb(249 250 251);
+  border: 1px solid rgb(209 213 219);
+  padding: 0.625rem 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(17 24 39);
+}
+
+.form-container input[name='description'] {
+  padding: 0.5rem 0 1rem 0.3rem;
+}
+
+.editing-form .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 0.4rem 1rem;
+  background-color: rgb(200 30 30);
+}
+
+.editing-form .add-new-task-btn {
+  display: block;
+  width: 70%;
+  background-color: rgb(8, 97, 67);
+  margin-top: 1rem;
+}

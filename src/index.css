@@ -16,6 +16,33 @@ code {
   width: 80%;
   margin: auto;
   margin-top: 5rem;
+  position: relative;
+}
+
+button {
+  padding: 0.625rem 1.25rem;
+  background-color: rgb(26 86 219);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: rgb(255 255 255);
+  border: none;
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(17 24 39);
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+
+.title .add-new {
+  display: inline-block;
+  background-color: rgb(8, 97, 67);
 }
 
 .row {
@@ -66,18 +93,4 @@ code {
   line-height: 1rem;
   font-weight: 600;
   color: rgb(30 66 159);
-}
-
-.edit-btn {
-  display: block;
-  border-radius: 0.5rem;
-  padding: 0.525rem 1rem;
-  background-color: rgb(26 86 219);
-  margin-left: auto;
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.25rem;
-  border: none;
-  color: #fff;
-  cursor: pointer;
 }

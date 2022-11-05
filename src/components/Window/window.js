@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { throttle } from 'lodash';
-import { useElementSize } from '../hooks';
+import { useElementSize } from '../../hooks';
 import './styles.css';
 
 const bufferedItems = 2;
